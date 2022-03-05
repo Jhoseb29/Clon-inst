@@ -1,0 +1,348 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+    --variable: #fff;
+  
+    /*========== Colors ==========*/
+    --color-primary: #00a8ff;
+    --color-secondary: #f5f5f5;
+  
+    /*========== Font and typography ==========*/
+    --body-font: sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-bold: 700;
+  
+    /*========== Margenes Bottom ==========*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+    background-color: rgb(255, 255, 255);
+}
+
+ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: #050505;
+}
+
+ul li a:hover{
+color: #0c0386;
+}
+
+.header{
+    position: fixed;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:var(--z-fixed);
+}
+
+.nav{
+    height: var(--header-height);
+    background-color: rgb(252, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-right: 10rem;
+    
+}
+
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.nav-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 0rem 1rem;
+    
+}
+
+.nav-perfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 0rem 1rem;
+    border-radius: 50%;
+    height: 20px;
+}
+
+
+.nav-toggle{
+    cursor: pointer;
+    display: none;
+}
+
+.nav-button{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu  {
+      position: fixed;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100%;
+      margin-top: var(--header-height);
+      padding: calc(2rem var(--header-height) 2rem 3.5rem);
+      transition: 0.9s ease-in-out;
+    }
+    
+      .nav-item {
+        margin-top: 20px;
+        
+      }
+    
+    .nav-toggle:checked ~ .nav-menu {
+        left: 0;
+      }
+
+}
+
+.card{
+    position: relative;
+    width: 380px;
+    min-height: 400px;
+    box-shadow: 10px 10px 50px #969697;
+    padding: 20px;
+    border-radius: 5%;
+    margin-top: 7rem;
+}
+
+
+
+.card .top{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+        
+}
+
+.card .top .userdetails{
+    display: flex;
+    align-items: center;
+}
+
+.card .top .userdetails .profile-img{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .top .userdetails h3{
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1em;
+
+}
+
+.card .top .userdetails h3 span{
+    font-size: 0.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.tres-puntos{
+    transform: scale(0.6);
+    cursor: pointer;
+}
+
+.post_img{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin: 10px 0 15px;
+
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.botones img{
+    max-width: 24px;
+    cursor: pointer;
+}
+
+.botones .left img{
+    margin-right: 8px;
+
+}
+
+.likes{
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 16px;
+    color:#000000;
+}
+
+.mensaje{
+    font-weight: 400;
+    margin-top: 5px;
+    color: rgb(57, 57, 58);
+    line-height: 1.5em;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+}
+
+.mensaje b{
+    color: #050505;
+}
+
+.mensajes h4{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mensaje span{
+    color: #033a6e;
+    cursor: pointer;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.comentarios{
+    margin-top: 10px;
+    font-weight: 400;
+    color: #999;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.addcomentarios{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.addcomentarios .user-img{
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.text{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.posttime{
+    margin-top: 10px;
+    font-weight: 500;
+    color: #999;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    
+}
+
+@media screen and (max-width: 768px){
+      
+   
+    .main{
+          position: relative;
+          flex-direction: column;
+          align-items: start;
+         
+      }
+      
+    .card{
+        position: relative;
+        flex-direction: column;
+        align-items: start;
+    
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    .nav-button {
+      display: none;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: .6rem;
+    background: hsl(0, 0%, 74%);
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 17%);
+    border-radius: 100px;
+  }
